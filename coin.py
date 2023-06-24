@@ -3,10 +3,10 @@
 import pyautogui
 from time import sleep
 
-tail = 350, 480
-head = 200, 480
-amount_location = 160, 440
-double = 431, 441
+tail = 174, 250
+head = 79, 250
+amount_location = 93, 209
+double = 177, 212
 bet_cashout = 292, 521
 bet_amount = '0.025'
 
@@ -16,7 +16,7 @@ def heads():
     
     sleep(1)
     
-    win = pyautogui.pixelMatchesColor(401, 268, (42, 45, 51))
+    win = pyautogui.pixelMatchesColor(408, 306, (42, 45, 51))
 
     if win:
         pyautogui.click(bet_cashout)
@@ -39,7 +39,7 @@ def tails():
     
     sleep(1)
     
-    win = pyautogui.pixelMatchesColor(401, 268, (42, 45, 51))
+    win = pyautogui.pixelMatchesColor(408, 306, (42, 45, 51))
 
     if win:
         pyautogui.click(bet_cashout)
@@ -61,10 +61,10 @@ def tails():
 
 def main():
     sleep(0.5)
-    win = pyautogui.pixelMatchesColor(401, 268, (42, 45, 51))
+    win = pyautogui.pixelMatchesColor(408, 306, (42, 45, 51))
     heads()
     sleep(0.5)
-    win = pyautogui.pixelMatchesColor(401, 268, (42, 45, 51))
+    win = pyautogui.pixelMatchesColor(408, 306, (42, 45, 51))
     tails()
     
 
