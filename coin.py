@@ -14,7 +14,7 @@ bet_amount = '0.025'
 def heads():
     #bcgame coin flip martingale
     
-    sleep(0.5)
+    sleep(1)
     
     win = pyautogui.pixelMatchesColor(416, 244, (42, 45, 51))
 
@@ -37,7 +37,7 @@ def heads():
 def tails():
     #bcgame coin flip martingale
     
-    sleep(0.5)
+    sleep(1)
     
     win = pyautogui.pixelMatchesColor(416, 244, (42, 45, 51))
 
