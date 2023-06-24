@@ -7,7 +7,7 @@ tail = 174, 250
 head = 79, 250
 amount_location = 93, 209
 double = 177, 212
-bet_cashout = 292, 521
+bet_cashout = 133, 290
 bet_amount = '0.025'
 
 
