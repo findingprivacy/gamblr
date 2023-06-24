@@ -5,9 +5,11 @@ function pause(){
 }
 sudo apt update -y &&
 sudo apt install dwm suckless-tools surf xrdp -y &&
-# sudo apt install python3-pip -y &&
-# sudo apt install python3-tk -y &&
-# sudo apt install python3-dev -y &&
+sudo apt install python3-pip -y &&
+sudo apt install python3-tk -y &&
+sudo apt install python3-dev -y &&
+sudo apt install python-is-python3 &&
+sudo apt install scrot &&
 sudo apt upgrade -y &&
 pause &&
 sudo su &&
