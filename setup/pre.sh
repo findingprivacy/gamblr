@@ -8,8 +8,9 @@ sudo apt install dwm suckless-tools surf xrdp -y &&
 sudo apt install python3-pip -y &&
 sudo apt install python3-tk -y &&
 sudo apt install python3-dev -y &&
-sudo apt install python-is-python3 &&
-sudo apt install scrot &&
+sudo apt install python-is-python3 -y &&
+sudo apt install scrot -y &&
+sudo apt install chromium-browser -y &&
 python -m pip install pyautogui &&
 sudo apt upgrade -y &&
 pause &&
