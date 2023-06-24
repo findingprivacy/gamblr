@@ -6,7 +6,7 @@ from time import sleep
 tail = 350, 480
 head = 200, 480
 amount_location = 180, 440
-double = 430, 442
+double = 432, 440
 bet_cashout = 295, 515
 bet_amount = '0.025'
 
