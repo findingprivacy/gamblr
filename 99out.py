@@ -8,16 +8,16 @@ from os import system
 payout_amount = '99' # float(input('Payout Amount : '))
 bet_amount = '0.0002' # float(input('Bet Amount : '))
 loss_increase_percentage = '1.015' # int(input('Percentage Increase on Loss : '))
-seed_location = 460, 375       
-new_seed = 267, 458
+seed_location = 441, 526       
+new_seed = 246, 516
 
 
-classic_dice_payout_location = 318, 299
-classic_dice_auto_bet_location = 239, 146
-classic_dice_bet_amount_location = 188, 176
-classic_dice_enable_loss_increase_location = 168, 290
-classic_dice_loss_increase_location = 219, 291
-classic_dice_start_location = 211, 367
+classic_dice_payout_location = 285, 404
+classic_dice_auto_bet_location = 175, 179
+classic_dice_bet_amount_location = 101, 221
+classic_dice_enable_loss_increase_location = 70, 394
+classic_dice_loss_increase_location = 141, 393
+classic_dice_start_location = 131, 511
 
 
 
@@ -27,7 +27,7 @@ def classicDice():
     with pyautogui.hold('alt'):
         pyautogui.press('p')
     sleep(1)
-    pyautogui.write('opera bc.game/game/classic-dice --new-window')
+    pyautogui.write('chromium bc.game/game/classic-dice --new-window')
     sleep(1)
     pyautogui.press('enter')
     sleep(10)
@@ -55,12 +55,12 @@ def classicDice():
     sleep(0.1)
 
 
-limbo_payout_location = 300, 325
-limbo_auto_bet_location = 239, 148
-limbo_bet_amount_location = 187, 177
-limbo_enable_loss_increase_location = 168, 291
-limbo_loss_increase_location = 217, 292
-limbo_start_location = 212, 369
+limbo_payout_location = 260, 444
+limbo_auto_bet_location = 175, 179
+limbo_bet_amount_location = 101, 221
+limbo_enable_loss_increase_location = 70, 394
+limbo_loss_increase_location = 141, 393
+limbo_start_location = 131, 511
 
 def limbo():
     #bcgame classic-dice
@@ -68,7 +68,7 @@ def limbo():
     with pyautogui.hold('alt'):
         pyautogui.press('p')
     sleep(1)
-    pyautogui.write('opera bc.game/game/limbo --new-window')
+    pyautogui.write('chromium bc.game/game/limbo --new-window')
     sleep(1)
     pyautogui.press('enter')
     sleep(10)
@@ -95,12 +95,12 @@ def limbo():
     pyautogui.click(limbo_start_location) # on auto
     sleep(0.1)
 
-ultimate_dice_payout_location = 315, 330
-ultimate_dice_auto_bet_location = 238, 148
-ultimate_dice_bet_amount_location = 188, 177
-ultimate_dice_enable_loss_increase_location = 169, 261
-ultimate_dice_loss_increase_location = 220, 263
-ultimate_dice_start_location = 212, 368
+ultimate_dice_payout_location = 268, 450
+ultimate_dice_auto_bet_location = 175, 179
+ultimate_dice_bet_amount_location = 101, 221
+ultimate_dice_enable_loss_increase_location = 70, 394
+ultimate_dice_loss_increase_location = 141, 393
+ultimate_dice_start_location = 131, 511
 
 def ultimateDice():
     #bcgame classic-dice
@@ -108,7 +108,7 @@ def ultimateDice():
     with pyautogui.hold('alt'):
         pyautogui.press('p')
     sleep(1)
-    pyautogui.write('opera bc.game/game/ultimate-dice --new-window')
+    pyautogui.write('chromium bc.game/game/ultimate-dice --new-window')
     sleep(1)
     pyautogui.press('enter')
     sleep(10)
