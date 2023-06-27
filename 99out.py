@@ -154,5 +154,4 @@ def main():
 #    sleep(900)
 #    clear()
 
-while True:
-    main()
+print(main)
