@@ -1,4 +1,4 @@
-#!/bin/python3
+f#!/bin/python3
 
 import pyautogui
 from time import sleep
@@ -100,7 +100,7 @@ ultimate_dice_auto_bet_location = 175, 179
 ultimate_dice_bet_amount_location = 101, 221
 ultimate_dice_enable_loss_increase_location = 74, 350
 ultimate_dice_loss_increase_location = 141, 393
-ultimate_dice_start_location = 149, 352
+ultimate_dice_start_location = 131, 511
 
 def ultimateDice():
     #bcgame classic-dice
@@ -135,24 +135,24 @@ def ultimateDice():
     pyautogui.click(ultimate_dice_start_location) # on auto
     sleep(0.1)
 
-def clear():
-     sleep(0.1)
-     with pyautogui.hold('shift'):
-        with pyautogui.hold('alt'):
-            sleep(0.1)
-            pyautogui.press('c')
-            sleep(0.1)
-            pyautogui.press('c')
-            sleep(0.1)
-            pyautogui.press('c')
+#def clear():
+#     sleep(0.1)
+#     with pyautogui.hold('shift'):
+#        with pyautogui.hold('alt'):
+#            sleep(0.1)
+#            pyautogui.press('c')
+#            sleep(0.1)
+#            pyautogui.press('c')
+#            sleep(0.1)
+#            pyautogui.press('c')
 
 
 def main():
     classicDice()
     limbo()
     ultimateDice()
-    sleep(900)
-    clear()
+#    sleep(900)
+#    clear()
 
 while True:
     main()
