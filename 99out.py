@@ -5,9 +5,9 @@ from time import sleep
 from os import system
 
 
-payout_amount = '99' # float(input('Payout Amount : '))
-bet_amount = '0.0002' # float(input('Bet Amount : '))
-loss_increase_percentage = '1.015' # int(input('Percentage Increase on Loss : '))
+payout_amount = '1.65' # float(input('Payout Amount : '))
+bet_amount = '0.00001' # float(input('Bet Amount : '))
+loss_increase_percentage = '200' # int(input('Percentage Increase on Loss : '))
 seed_location = 441, 526       
 new_seed = 246, 516
 
@@ -98,9 +98,9 @@ def limbo():
 ultimate_dice_payout_location = 268, 450
 ultimate_dice_auto_bet_location = 175, 179
 ultimate_dice_bet_amount_location = 101, 221
-ultimate_dice_enable_loss_increase_location = 70, 394
+ultimate_dice_enable_loss_increase_location = 74, 350
 ultimate_dice_loss_increase_location = 141, 393
-ultimate_dice_start_location = 131, 511
+ultimate_dice_start_location = 149, 352
 
 def ultimateDice():
     #bcgame classic-dice
