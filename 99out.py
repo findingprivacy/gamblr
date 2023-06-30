@@ -10,12 +10,12 @@ bet_amount = '0.01' # float(input('Bet Amount : '))
 loss_increase_percentage = '250' # int(input('Percentage Increase on Loss : '))
 seed_location = 456, 389       
 new_seed = 277, 465
-classic_dice_payout_location = 265, 326
-classic_dice_auto_bet_location = 174, 163
-classic_dice_bet_amount_location = 134, 195
-classic_dice_enable_loss_increase_location = 115, 306
-classic_dice_loss_increase_location = 156, 309
-classic_dice_start_location = 147, 383
+classic_dice_payout_location = 336, 313
+classic_dice_auto_bet_location = 255, 164
+classic_dice_bet_amount_location = 219, 194
+classic_dice_enable_loss_increase_location = 195, 306
+classic_dice_loss_increase_location = 235, 309
+classic_dice_start_location = 230, 385
 classic_dice_exit_location = 481, 44
 
 
