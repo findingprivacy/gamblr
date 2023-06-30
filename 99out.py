@@ -54,5 +54,5 @@ def classicDice():
     sleep(5)
     pyautogui.click(classic_dice_exit_location)
 
-
-
+while True:
+    classicDice()
