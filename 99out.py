@@ -160,8 +160,9 @@ def ultimateDice():
 
 def main():
     classicDice()
-    limbo()
-    ultimateDice()
+    sleep(30)
+    #limbo()
+    #ultimateDice()
 
 while True:
     main()
