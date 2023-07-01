@@ -6,10 +6,12 @@ from time import sleep
 from os import system
 
 
-payout_amount = '1.65' # float(input('Payout Amount : '))
+payout_amount = '1.5' # float(input('Payout Amount : '))
 bet_amount = '0.001' # float(input('Bet Amount : '))
 loss_increase_percentage = '250' # int(input('Percentage Increase on Loss : '))
 reload = 89, 74
+address_bar = 175, 73
+url = 'https://bc.game/game/classic-dice'
 
 classic_dice_seed_location = 441, 514       
 classic_dice_new_seed = 250, 516
@@ -35,7 +37,11 @@ def classicDice():
 #    pyautogui.press('enter')
     pyautogui.click(classic_dice_tab)
     sleep(0.25)
-    pyautogui.click(reload)
+    pyautogui.click(address_bar)
+    sleep(0.25)
+    pyautogui.write(url)
+    sleep(0.25)
+    pyautogui.press('enter')
     sleep(10)
     pyautogui.click(classic_dice_seed_location) # change seed
     sleep(2.5)
