@@ -1,34 +1,36 @@
 #!/bin/python3
-# OPERA BROWSER 33% ZOOM
+# chromium BROWSER 50% ZOOM
 import pyautogui
 from time import sleep
 from os import system
 
 
-payout_amount = '2' # float(input('Payout Amount : '))
-bet_amount = '0.01' # float(input('Bet Amount : '))
-loss_increase_percentage = '110' # int(input('Percentage Increase on Loss : '))
-seed_location = 456, 389       
-new_seed = 277, 465
-classic_dice_payout_location = 336, 313
-classic_dice_auto_bet_location = 255, 164
-classic_dice_bet_amount_location = 219, 194
-classic_dice_enable_loss_increase_location = 195, 306
-classic_dice_loss_increase_location = 235, 309
-classic_dice_start_location = 230, 385
-classic_dice_exit_location = 481, 44
+payout_amount = '1.65' # float(input('Payout Amount : '))
+bet_amount = '0.001' # float(input('Bet Amount : '))
+loss_increase_percentage = '250' # int(input('Percentage Increase on Loss : '))
+seed_location = 441, 514       
+new_seed = 250, 516
+reload = 89, 74
+classic_dice_payout_location = 289, 406
+classic_dice_auto_bet_location = 173, 180
+classic_dice_bet_amount_location = 100, 222
+classic_dice_enable_loss_increase_location = 89, 393
+classic_dice_loss_increase_location = 139, 395
+classic_dice_start_location = 165, 512
+
 
 
 
 def classicDice():
     #bcgame classic-dice
-    sleep(0.25)
-    with pyautogui.hold('alt'):
-        pyautogui.press('p')
-    sleep(.25)
-    pyautogui.write('opera bc.game/game/classic-dice --new-window')
-    sleep(0.25)
-    pyautogui.press('enter')
+#    sleep(0.25)
+#    with pyautogui.hold('alt'):
+#        pyautogui.press('p')
+#    sleep(.25)
+#    pyautogui.write('opera bc.game/game/classic-dice --new-window')
+#    sleep(0.25)
+#    pyautogui.press('enter')
+    pyautogui.click(reload)
     sleep(10)
     pyautogui.click(seed_location) # change seed
     sleep(2.5)
@@ -51,8 +53,8 @@ def classicDice():
     pyautogui.write(payout_amount)
     sleep(0.25)
     pyautogui.click(classic_dice_start_location) # on auto
-    sleep(5)
-    pyautogui.click(classic_dice_exit_location)
+    sleep(60)
+#    pyautogui.click(classic_dice_exit_location)
 
 while True:
     classicDice()
