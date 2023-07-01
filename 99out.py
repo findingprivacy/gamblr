@@ -5,7 +5,7 @@ import pyautogui
 from time import sleep
 from os import system
 payout_amount = '1.5' # float(input('Payout Amount : '))
-bet_amount = '0.001' # float(input('Bet Amount : '))
+bet_amount = '0.00001' # float(input('Bet Amount : '))
 loss_increase_percentage = '250' # int(input('Percentage Increase on Loss : '))
 reload = 89, 74
 address_bar = 175, 73
