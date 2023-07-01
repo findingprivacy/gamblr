@@ -4,15 +4,12 @@
 import pyautogui
 from time import sleep
 from os import system
-
-
 payout_amount = '1.5' # float(input('Payout Amount : '))
 bet_amount = '0.001' # float(input('Bet Amount : '))
 loss_increase_percentage = '250' # int(input('Percentage Increase on Loss : '))
 reload = 89, 74
 address_bar = 175, 73
-url = 'https://bc.game/game/classic-dice'
-
+classic_dice_url = 'https://bc.game/game/classic-dice'
 classic_dice_seed_location = 441, 514       
 classic_dice_new_seed = 250, 516
 classic_dice_tab = 70, 35
@@ -22,24 +19,32 @@ classic_dice_bet_amount_location = 100, 222
 classic_dice_enable_loss_increase_location = 89, 393
 classic_dice_loss_increase_location = 139, 395
 classic_dice_start_location = 165, 512
-
-
-
-
+limbo_url = 'https://bc.game/game/limbo'
+limbo_seed_location = 446, 514       
+limbo_new_seed = 250, 516
+limbo_tab = 190, 39
+limbo_payout_location = 264, 445
+limbo_auto_bet_location = 173, 180
+limbo_bet_amount_location = 100, 222
+limbo_enable_loss_increase_location = 89, 393
+limbo_loss_increase_location = 139, 395
+limbo_start_location = 165, 512
+ultimate_dice_url = 'https://bc.game/game/ultimate-dice'
+ultimate_dice_seed_location = 440, 529       
+ultimate_dice_new_seed = 250, 516
+ultimate_dice_tab = 309, 39
+ultimate_dice_payout_location = 281, 448
+ultimate_dice_auto_bet_location = 173, 180
+ultimate_dice_bet_amount_location = 100, 222
+ultimate_dice_enable_loss_increase_location = 86, 351
+ultimate_dice_loss_increase_location = 150, 351
+ultimate_dice_start_location = 165, 512
 def classicDice():
-    #bcgame classic-dice
-#    sleep(0.25)
-#    with pyautogui.hold('alt'):
-#        pyautogui.press('p')
-#    sleep(.25)
-#    pyautogui.write('opera bc.game/game/classic-dice --new-window')
-#    sleep(0.25)
-#    pyautogui.press('enter')
     pyautogui.click(classic_dice_tab)
     sleep(0.25)
     pyautogui.click(address_bar)
     sleep(0.25)
-    pyautogui.write(url)
+    pyautogui.write(classic_dice_url)
     sleep(0.25)
     pyautogui.press('enter')
     sleep(10)
@@ -65,32 +70,14 @@ def classicDice():
     sleep(0.25)
     pyautogui.click(classic_dice_start_location) # on auto
     sleep(0.1)
-#    pyautogui.click(classic_dice_exit_location)
-
-limbo_seed_location = 446, 514       
-limbo_new_seed = 250, 516
-limbo_tab = 190, 39
-limbo_payout_location = 264, 445
-limbo_auto_bet_location = 173, 180
-limbo_bet_amount_location = 100, 222
-limbo_enable_loss_increase_location = 89, 393
-limbo_loss_increase_location = 139, 395
-limbo_start_location = 165, 512
-
-
-
 def limbo():
-    #bcgame classic-dice
-#    sleep(0.25)
-#    with pyautogui.hold('alt'):
-#        pyautogui.press('p')
-#    sleep(.25)
-#    pyautogui.write('opera bc.game/game/classic-dice --new-window')
-#    sleep(0.25)
-#    pyautogui.press('enter')
     pyautogui.click(limbo_tab)
     sleep(0.25)
-    pyautogui.click(reload)
+    pyautogui.click(address_bar)
+    sleep(0.25)
+    pyautogui.write(limbo_url)
+    sleep(0.25)
+    pyautogui.press('enter')
     sleep(10)
     pyautogui.click(limbo_seed_location) # change seed
     sleep(2.5)
@@ -114,32 +101,14 @@ def limbo():
     sleep(0.25)
     pyautogui.click(limbo_start_location) # on auto
     sleep(0.1)
-#    sleep(60)
-#    pyautogui.click(classic_dice_exit_location)
-
-
-ultimate_dice_seed_location = 440, 529       
-ultimate_dice_new_seed = 250, 516
-ultimate_dice_tab = 309, 39
-ultimate_dice_payout_location = 281, 448
-ultimate_dice_auto_bet_location = 173, 180
-ultimate_dice_bet_amount_location = 100, 222
-ultimate_dice_enable_loss_increase_location = 86, 351
-ultimate_dice_loss_increase_location = 150, 351
-ultimate_dice_start_location = 165, 512
-
 def ultimateDice():
-    #bcgame classic-dice
-#    sleep(0.25)
-#    with pyautogui.hold('alt'):
-#        pyautogui.press('p')
-#    sleep(.25)
-#    pyautogui.write('opera bc.game/game/classic-dice --new-window')
-#    sleep(0.25)
-#    pyautogui.press('enter')
     pyautogui.click(ultimate_dice_tab)
     sleep(0.25)
-    pyautogui.click(reload)
+    pyautogui.click(address_bar)
+    sleep(0.25)
+    pyautogui.write(ultimate_dice_url)
+    sleep(0.25)
+    pyautogui.press('enter')
     sleep(10)
     pyautogui.click(ultimate_dice_seed_location) # change seed
     sleep(2.5)
@@ -163,12 +132,9 @@ def ultimateDice():
     sleep(0.25)
     pyautogui.click(ultimate_dice_start_location) # on auto
     sleep(0.1)
-
 def main():
     classicDice()
-    sleep(30)
-    #limbo()
-    #ultimateDice()
-
+    limbo()
+    ultimateDice()
 while True:
     main()
