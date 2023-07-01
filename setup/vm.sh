@@ -8,4 +8,4 @@ sudo apt install python-is-python3 -y &&
 sudo apt install scrot -y &&
 sudo apt install chromium-browser -y &&
 python -m pip install pyautogui &&
-sudo apt upgrade -y &&
+sudo apt upgrade -y
