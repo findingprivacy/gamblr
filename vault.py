@@ -5,9 +5,6 @@ import pyautogui
 from time import sleep
 from os import system
 bankroll = '5'
-payout_amount = '1.5' # float(input('Payout Amount : '))
-bet_amount = '0.00001' # float(input('Bet Amount : '))
-loss_increase_percentage = '250' # int(input('Percentage Increase on Loss : '))
 address_bar = 175, 73
 vault_url = 'https://bc.game/'
 vault_tab = 321, 37
