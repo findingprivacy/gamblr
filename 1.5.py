@@ -12,7 +12,7 @@ vault_transfer = 289, 293
 vault_out = 310, 180
 vault_amount = 204, 254
 payout_amount = '1.5' # float(input('Payout Amount : '))
-bet_amount = '0.001' # float(input('Bet Amount : '))
+bet_amount = '0.0001' # float(input('Bet Amount : '))
 loss_increase_percentage = '250' # int(input('Percentage Increase on Loss : '))
 address_bar = 175, 73
 classic_dice_url = 'https://bc.game/game/classic-dice'
@@ -164,11 +164,25 @@ def ultimateDice():
     sleep(0.25)
     pyautogui.click(ultimate_dice_start_location) # on auto
     sleep(0.1)
+def stop():
+    pyautogui.click(classic_dice_tab)
+    sleep(0.25)
+    pyautogui.click(classic_dice_start_location) # on auto
+    sleep(0.1)
+    pyautogui.click(limbo_tab)
+    sleep(0.25)
+    pyautogui.click(limbo_start_location) # on auto
+    sleep(0.1)
+    pyautogui.click(ultimate_dice_tab)
+    sleep(0.25)
+    pyautogui.click(ultimate_dice_start_location) # on auto
+    sleep(0.1)
 def main():
-    vault()
     classicDice()
     limbo()
     ultimateDice()
-    sleep(60)
+    sleep(10)
+    stop()
+    vault()
 while True:
     main()
