@@ -168,15 +168,8 @@ def vault():
     sleep(0.1)
     pyautogui.click(vault_transfer)
 def main():
-    x = 1
     classicDice()
     limbo()
     ultimateDice()
-    x = x + 1
-    while x < 3:
-        main()
-    else:
-        vault()
-        x = 0
 while True:
     main()
