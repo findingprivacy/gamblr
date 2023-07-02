@@ -4,14 +4,25 @@
 import pyautogui
 from time import sleep
 from os import system
+bankroll = '5'
+x = 0
 payout_amount = '1.5' # float(input('Payout Amount : '))
 bet_amount = '0.00001' # float(input('Bet Amount : '))
 loss_increase_percentage = '250' # int(input('Percentage Increase on Loss : '))
 address_bar = 175, 73
+vault_url = 'https://bc.game/'
+vault_tab = 321, 37
+vault_profile = 408, 109
+vault_wallet = 345, 147
+vault_pro = 90, 307
+vault_max = 327, 256
+vault_transfer = 289, 293
+vault_out = 310, 180
+vault_amount = 204, 254
 classic_dice_url = 'https://bc.game/game/classic-dice'
 classic_dice_seed_location = 441, 514       
 classic_dice_new_seed = 250, 516
-classic_dice_tab = 70, 35
+classic_dice_tab = 50, 38
 classic_dice_payout_location = 289, 406
 classic_dice_auto_bet_location = 173, 180
 classic_dice_bet_amount_location = 100, 222
@@ -21,7 +32,7 @@ classic_dice_start_location = 165, 512
 limbo_url = 'https://bc.game/game/limbo'
 limbo_seed_location = 446, 514       
 limbo_new_seed = 250, 516
-limbo_tab = 190, 39
+limbo_tab = 141, 39
 limbo_payout_location = 264, 445
 limbo_auto_bet_location = 173, 180
 limbo_bet_amount_location = 100, 222
@@ -31,7 +42,7 @@ limbo_start_location = 165, 512
 ultimate_dice_url = 'https://bc.game/game/ultimate-dice'
 ultimate_dice_seed_location = 440, 529       
 ultimate_dice_new_seed = 250, 516
-ultimate_dice_tab = 309, 39
+ultimate_dice_tab = 234, 39
 ultimate_dice_payout_location = 281, 448
 ultimate_dice_auto_bet_location = 173, 180
 ultimate_dice_bet_amount_location = 100, 222
@@ -131,9 +142,44 @@ def ultimateDice():
     sleep(0.25)
     pyautogui.click(ultimate_dice_start_location) # on auto
     sleep(0.1)
+def vault():
+    pyautogui.click(vault_tab)
+    sleep(0.25)
+    pyautogui.click(address_bar)
+    sleep(0.25)
+    pyautogui.write(vault_url)
+    sleep(0.25)
+    pyautogui.press('enter')
+    sleep(10)
+    pyautogui.moveTo(vault_profile)
+    sleep(0.25)
+    pyautogui.click(vault_wallet)
+    sleep(5)
+    pyautogui.click(vault_pro)
+    sleep(5)
+    pyautogui.click(vault_max)
+    sleep(0.1)
+    pyautogui.click(vault_transfer)
+    sleep(0.1)
+    pyautogui.click(vault_out)
+    sleep(0.1)
+    pyautogui.doubleClick(vault_amount, interval=0.25)
+    sleep(0.1)
+    pyautogui.write(bankroll)
+    sleep(0.1)
+    pyautogui.click(vault_transfer)
+    x = 0
+    return x
 def main():
+    x = x
     classicDice()
     limbo()
     ultimateDice()
+    x = x + 1
+def game():
+    while x < 3:
+        main()
+    else:
+        vault()
 while True:
-    main()
+    game()
