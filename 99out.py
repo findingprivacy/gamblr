@@ -5,7 +5,6 @@ import pyautogui
 from time import sleep
 from os import system
 bankroll = '5'
-x = 0
 payout_amount = '1.5' # float(input('Payout Amount : '))
 bet_amount = '0.00001' # float(input('Bet Amount : '))
 loss_increase_percentage = '250' # int(input('Percentage Increase on Loss : '))
@@ -168,18 +167,16 @@ def vault():
     pyautogui.write(bankroll)
     sleep(0.1)
     pyautogui.click(vault_transfer)
-    x = 0
-    return x
 def main():
-    x = x
+    x = 1
     classicDice()
     limbo()
     ultimateDice()
     x = x + 1
-def game():
     while x < 3:
         main()
     else:
         vault()
+        x = 0
 while True:
-    game()
+    main()
