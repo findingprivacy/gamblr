@@ -30,7 +30,7 @@ def heads():
     if win:
         pyautogui.click(bet_cashout)
         sleep(0.1)
-        vault()
+        game()
     else:
         pyautogui.click(double)
         sleep(0.1)
@@ -80,3 +80,5 @@ def game():
     heads()
 while True:
     game()
+    sleep(10)
+    vault()
