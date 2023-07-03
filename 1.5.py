@@ -1,6 +1,6 @@
 import pyautogui
 from time import sleep
-bankroll = '5'
+bankroll = '2.5'
 address_bar = 175, 73
 vault_url = 'https://bc.game/'
 vault_tab = 321, 37
@@ -12,7 +12,7 @@ vault_transfer = 289, 293
 vault_out = 310, 180
 vault_amount = 204, 254
 payout_amount = '1.5' # float(input('Payout Amount : '))
-bet_amount = '0.0001' # float(input('Bet Amount : '))
+bet_amount = '0.00025' # float(input('Bet Amount : '))
 loss_increase_percentage = '250' # int(input('Percentage Increase on Loss : '))
 address_bar = 175, 73
 classic_dice_url = 'https://bc.game/game/classic-dice'
@@ -181,7 +181,7 @@ def main():
     classicDice()
     limbo()
     ultimateDice()
-    sleep(30)
+    sleep(60)
     stop()
     vault()
 while True:
