@@ -20,14 +20,13 @@ vault_out = 310, 180
 vault_amount = 204, 254
 coin_url = 'https://bc.game/game/coinflip'
 coin_tab = 50, 38
-win = pyautogui.pixelMatchesColor(406, 310, (58, 181, 25))
 def heads():
     sleep(0.25)
     pyautogui.click(bet_cashout)
     sleep(1)
     pyautogui.click(head)
     sleep(0.1)
-    win = pyautogui.pixelMatchesColor(406, 310, (58, 181, 25))
+    win = pyautogui.pixelMatchesColor(409, 306, (59, 193, 23))
     if win:
         pyautogui.click(bet_cashout)
         vault()
