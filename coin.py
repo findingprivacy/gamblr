@@ -29,9 +29,11 @@ def heads():
     win = pyautogui.pixelMatchesColor(409, 306, (59, 193, 23))
     if win:
         pyautogui.click(bet_cashout)
+        sleep(0.1)
         vault()
     else:
         pyautogui.click(double)
+        sleep(0.1)
         heads()
 def vault():
     pyautogui.click(vault_tab)
