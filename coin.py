@@ -20,7 +20,19 @@ vault_out = 310, 180
 vault_amount = 204, 254
 coin_url = 'https://bc.game/game/coinflip'
 coin_tab = 50, 38
-def heads():
+def game():
+    sleep(0.1)
+    pyautogui.click(coin_tab)
+    sleep(0.1)
+    pyautogui.click(address_bar)
+    sleep(0.1)
+    pyautogui.write(coin_url)
+    sleep(0.1)
+    pyautogui.press('enter')
+    sleep(10)
+    pyautogui.doubleClick(amount_location, interval=0.25)
+    sleep(0.25)
+    pyautogui.write(bet_amount)
     sleep(0.25)
     pyautogui.click(bet_cashout)
     sleep(1)
@@ -30,11 +42,11 @@ def heads():
     if win:
         pyautogui.click(bet_cashout)
         sleep(0.1)
-        game()
+        vault()
     else:
         pyautogui.click(double)
         sleep(0.1)
-        heads()
+        game()
 def vault():
     pyautogui.click(vault_tab)
     sleep(0.25)
@@ -63,22 +75,5 @@ def vault():
     pyautogui.click(vault_transfer)
     sleep(0.1)
     game()
-def game():
-    sleep(0.1)
-    pyautogui.click(coin_tab)
-    sleep(0.1)
-    pyautogui.click(address_bar)
-    sleep(0.1)
-    pyautogui.write(coin_url)
-    sleep(0.1)
-    pyautogui.press('enter')
-    sleep(10)
-    pyautogui.doubleClick(amount_location, interval=0.25)
-    sleep(0.25)
-    pyautogui.write(bet_amount)
-    sleep(0.25)
-    heads()
 while True:
     game()
-    sleep(10)
-    vault()
