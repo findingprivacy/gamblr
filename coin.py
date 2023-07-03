@@ -38,15 +38,21 @@ def game():
     sleep(1)
     pyautogui.click(head)
     sleep(0.1)
+def heads():
     win = pyautogui.pixelMatchesColor(456, 304, (59, 192, 23))
     if win:
         pyautogui.click(bet_cashout)
         sleep(0.1)
-        vault()
+        pyautogui.doubleClick(amount_location, interval=0.25)
+        sleep(0.25)
+        pyautogui.write(bet_amount)
     else:
         pyautogui.click(double)
         sleep(0.1)
-        game()
+    pyautogui.click(bet_cashout)
+    sleep(1)
+    pyautogui.click(head)
+    sleep(0.1)
 def vault():
     pyautogui.click(vault_tab)
     sleep(0.25)
@@ -74,5 +80,18 @@ def vault():
     sleep(0.1)
     pyautogui.click(vault_transfer)
     sleep(0.1)
+def main():
     game()
-vault()
+    heads()
+    heads()
+    heads()
+    heads()
+    heads()
+    heads()
+    heads()
+    heads()
+    heads()
+    heads()
+    vault()
+while True:
+    main()
