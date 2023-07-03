@@ -61,6 +61,8 @@ def vault():
     pyautogui.write(bankroll)
     sleep(0.1)
     pyautogui.click(vault_transfer)
+    sleep(0.1)
+    game()
 def game():
     sleep(0.1)
     pyautogui.click(coin_tab)
@@ -75,7 +77,6 @@ def game():
     sleep(0.25)
     pyautogui.write(bet_amount)
     sleep(0.25)
-def main():
-    
+    heads()
 while True:
     game()
