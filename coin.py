@@ -75,4 +75,4 @@ def vault():
     pyautogui.click(vault_transfer)
     sleep(0.1)
     game()
-game()
+vault()
