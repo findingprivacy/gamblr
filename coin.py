@@ -22,6 +22,7 @@ coin_url = 'https://bc.game/game/coinflip'
 coin_tab = 50, 38
 win = pyautogui.pixelMatchesColor(406, 310, (58, 181, 25))
 def heads():
+    win = pyautogui.pixelMatchesColor(406, 310, (58, 181, 25))
     sleep(1)
     if win:
         pyautogui.click(bet_cashout)
@@ -37,6 +38,7 @@ def heads():
     sleep(1)
     pyautogui.click(head)
 def tails():
+    win = pyautogui.pixelMatchesColor(406, 310, (58, 181, 25))
     sleep(1)
     if win:
         pyautogui.click(bet_cashout)
