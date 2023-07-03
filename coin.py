@@ -20,6 +20,7 @@ vault_out = 310, 180
 vault_amount = 204, 254
 coin_url = 'https://bc.game/game/coinflip'
 coin_tab = 50, 38
+win = pyautogui.pixelMatchesColor(406, 310, (58, 181, 25))
 def heads():
     sleep(1)
     if win:
