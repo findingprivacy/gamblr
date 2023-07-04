@@ -105,7 +105,7 @@ def vault():
     pyautogui.click(vault_transfer)
     sleep(0.1)
 def main():
-    heads()
+    game()
     win = pyautogui.pixelMatchesColor(456, 304, (59, 192, 23))
     tails()
     win = pyautogui.pixelMatchesColor(456, 304, (59, 192, 23))
@@ -124,6 +124,8 @@ def main():
     heads()
     win = pyautogui.pixelMatchesColor(456, 304, (59, 192, 23))
     tails()
+    win = pyautogui.pixelMatchesColor(456, 304, (59, 192, 23))
+    heads()
     win = pyautogui.pixelMatchesColor(456, 304, (59, 192, 23))
     vault()
 while True:
