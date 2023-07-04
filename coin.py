@@ -39,8 +39,7 @@ def game():
     pyautogui.click(head)
     sleep(0.1)
 def heads():
-    sleep(0.1)
-    pyautogui.click(coin_tab)
+    sleep(0.1))
     win = pyautogui.pixelMatchesColor(456, 304, (59, 192, 23))
     if win:
         pyautogui.click(bet_cashout)
@@ -55,6 +54,8 @@ def heads():
     sleep(1)
     pyautogui.click(head)
     sleep(1)
+def tails():
+    sleep(0.1))
     win = pyautogui.pixelMatchesColor(456, 304, (59, 192, 23))
     if win:
         pyautogui.click(bet_cashout)
@@ -63,13 +64,17 @@ def heads():
         sleep(0.25)
         pyautogui.write(bet_amount)
     else:
-        pass
+        pyautogui.click(double)
         sleep(0.1)
+    pyautogui.click(bet_cashout)
+    sleep(1)
+    pyautogui.click(tail)
+    sleep(1)
 def vault():
     win = pyautogui.pixelMatchesColor(456, 304, (59, 192, 23))
     if win:
         pyautogui.click(bet_cashout)
-        sleep(0.1)
+        sleep(1)
     else:
         pass
         sleep(0.1)
@@ -102,33 +107,23 @@ def vault():
 def main():
     heads()
     win = pyautogui.pixelMatchesColor(456, 304, (59, 192, 23))
-    heads()
+    tails()
     win = pyautogui.pixelMatchesColor(456, 304, (59, 192, 23))
     heads()
     win = pyautogui.pixelMatchesColor(456, 304, (59, 192, 23))
-    heads()
+    tails()
     win = pyautogui.pixelMatchesColor(456, 304, (59, 192, 23))
     heads()
     win = pyautogui.pixelMatchesColor(456, 304, (59, 192, 23))
-    heads()
+    tails()
     win = pyautogui.pixelMatchesColor(456, 304, (59, 192, 23))
     heads()
     win = pyautogui.pixelMatchesColor(456, 304, (59, 192, 23))
-    heads()
+    tails()
     win = pyautogui.pixelMatchesColor(456, 304, (59, 192, 23))
     heads()
     win = pyautogui.pixelMatchesColor(456, 304, (59, 192, 23))
-    heads()
-    win = pyautogui.pixelMatchesColor(456, 304, (59, 192, 23))
-    heads()
-    win = pyautogui.pixelMatchesColor(456, 304, (59, 192, 23))
-    heads()
-    win = pyautogui.pixelMatchesColor(456, 304, (59, 192, 23))
-    heads()
-    win = pyautogui.pixelMatchesColor(456, 304, (59, 192, 23))
-    heads()
-    win = pyautogui.pixelMatchesColor(456, 304, (59, 192, 23))
-    heads()
+    tails()
     win = pyautogui.pixelMatchesColor(456, 304, (59, 192, 23))
     vault()
 while True:
