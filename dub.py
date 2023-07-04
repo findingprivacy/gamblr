@@ -6,6 +6,7 @@ tail = 174, 250
 head = 79, 250
 amount_location = 93, 209
 double = 177, 212
+half = 154, 213
 bet_cashout = 133, 290
 bet_amount = '0.001'
 bankroll = '1'
@@ -24,6 +25,22 @@ coin_url = 'https://bc.game/game/coinflip'
 coin_tab = 50, 38
 def game():
     sleep(0.1)
+    win = pyautogui.pixelMatchesColor(456, 304, (59, 192, 23))
+    if win:
+        pyautogui.click(bet_cashout)
+        sleep(1)
+        pyautogui.doubleClick(amount_location, interval=0.25)
+        sleep(0.25)
+        pyautogui.write(bet_amount)
+    else:
+        pyautogui.click(double)
+        sleep(0.1)
+        pyautogui.click(double)
+        sleep(0.1)
+    pyautogui.click(bet_cashout)
+    sleep(1)
+    pyautogui.click(head)
+    sleep(1)
     win = pyautogui.pixelMatchesColor(456, 304, (59, 192, 23))
     if win:
         pyautogui.click(bet_cashout)
@@ -50,6 +67,20 @@ def game():
         sleep(0.25)
         pyautogui.write(bet_amount)
     else:
+        pyautogui.click(half)
+        sleep(0.1)
+    pyautogui.click(bet_cashout)
+    sleep(1)
+    pyautogui.click(tail)
+    sleep(1)
+    win = pyautogui.pixelMatchesColor(456, 304, (59, 192, 23))
+    if win:
+        pyautogui.click(bet_cashout)
+        sleep(1)
+        pyautogui.doubleClick(amount_location, interval=0.25)
+        sleep(0.25)
+        pyautogui.write(bet_amount)
+    else:
         pyautogui.click(double)
         sleep(0.1)
         pyautogui.click(double)
@@ -60,6 +91,7 @@ def game():
     sleep(1)
     win = pyautogui.pixelMatchesColor(456, 304, (59, 192, 23))
     if win:
+        pyautogui.click(bet_cashout)
         pyautogui.click(bet_cashout)
         sleep(1)
         pyautogui.click(vault_tab)
@@ -93,6 +125,7 @@ def game():
     win = pyautogui.pixelMatchesColor(456, 304, (59, 192, 23))
     if win:
         pyautogui.click(bet_cashout)
+        pyautogui.click(bet_cashout)
         sleep(1)
         pyautogui.click(vault_tab)
         sleep(0.1)
@@ -148,9 +181,7 @@ def game():
         sleep(0.25)
         pyautogui.write(bet_amount)
     else:
-        pyautogui.click(double)
-        sleep(0.1)
-        pyautogui.click(double)
+        pyautogui.click(half)
         sleep(0.1)
     pyautogui.click(bet_cashout)
     sleep(1)
