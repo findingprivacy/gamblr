@@ -39,7 +39,7 @@ def game():
     pyautogui.click(head)
     sleep(0.1)
 def heads():
-    sleep(0.1))
+    sleep(0.1)
     win = pyautogui.pixelMatchesColor(456, 304, (59, 192, 23))
     if win:
         pyautogui.click(bet_cashout)
@@ -55,7 +55,7 @@ def heads():
     pyautogui.click(head)
     sleep(1)
 def tails():
-    sleep(0.1))
+    sleep(0.1)
     win = pyautogui.pixelMatchesColor(456, 304, (59, 192, 23))
     if win:
         pyautogui.click(bet_cashout)
