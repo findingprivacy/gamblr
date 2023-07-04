@@ -6,7 +6,7 @@ head = 79, 250
 amount_location = 93, 209
 double = 177, 212
 bet_cashout = 133, 290
-bet_amount = '0.00001'
+bet_amount = '0.0001'
 bankroll = '1'
 address_bar = 175, 73
 vault_url = 'https://bc.game/'
@@ -85,8 +85,6 @@ def tails():
         sleep(0.25)
         pyautogui.write(bet_amount)
     else:
-        pyautogui.click(double)
-        sleep(0.1)
         pyautogui.click(double)
         sleep(0.1)
         pyautogui.click(double)
