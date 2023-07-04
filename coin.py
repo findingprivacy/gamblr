@@ -59,6 +59,9 @@ def heads():
     if win:
         pyautogui.click(bet_cashout)
         sleep(0.1)
+        pyautogui.doubleClick(amount_location, interval=0.25)
+        sleep(0.25)
+        pyautogui.write(bet_amount)
     else:
         pass
         sleep(0.1)
