@@ -110,6 +110,8 @@ def vault():
         sleep(0.1)
         pyautogui.click(vault_transfer)
         sleep(0.1)
+        pyautogui.click(coin_tab)
+        sleep(0.1)
     else:
         sleep(0.1)
         pyautogui.click(vault_tab)
@@ -127,6 +129,8 @@ def vault():
         pyautogui.write(bankroll)
         sleep(0.1)
         pyautogui.click(vault_transfer)
+        sleep(0.1)
+        pyautogui.click(coin_tab)
         sleep(0.1)
 def main():
     win = pyautogui.pixelMatchesColor(456, 304, (59, 192, 23))
