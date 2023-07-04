@@ -6,7 +6,7 @@ head = 79, 250
 amount_location = 93, 209
 double = 177, 212
 bet_cashout = 133, 290
-bet_amount = '0.01'
+bet_amount = '0.001'
 bankroll = '1'
 address_bar = 175, 73
 vault_url = 'https://bc.game/'
@@ -143,11 +143,5 @@ def main():
     heads()
     win = pyautogui.pixelMatchesColor(456, 304, (59, 192, 23))
     tails()
-    win = pyautogui.pixelMatchesColor(456, 304, (59, 192, 23))
-    heads()
-    win = pyautogui.pixelMatchesColor(456, 304, (59, 192, 23))
-    tails()
-    win = pyautogui.pixelMatchesColor(456, 304, (59, 192, 23))
-    vault()
 while True:
     main()
