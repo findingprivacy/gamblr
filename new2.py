@@ -8,8 +8,8 @@ head = 155, 261
 amount_location = 159, 225
 double = 235, 225
 bet_cashout = 195, 300
-bet_amount = '0.0001'
-bankroll = '0.5461'
+bet_amount = '0.00001'
+bankroll = '0.87381'
 vault_tab = 250, 45
 vault_max = 384, 267
 vault_transfer = 345, 310
@@ -34,6 +34,24 @@ def heads():
     pyautogui.click(bet_cashout)
     sleep(1)
     pyautogui.click(head)
+    sleep(1)
+def tails():
+    sleep(0.1)
+    win = pyautogui.pixelMatchesColor(484, 321, (42, 45, 51))
+    if win:
+        pyautogui.click(bet_cashout)
+        sleep(1)
+        pyautogui.doubleClick(amount_location, interval=0.25)
+        sleep(0.25)
+        pyautogui.write(bet_amount)
+    else:
+        pyautogui.click(double)
+        sleep(0.1)
+        pyautogui.click(double)
+        sleep(0.1)
+    pyautogui.click(bet_cashout)
+    sleep(1)
+    pyautogui.click(tail)
     sleep(1)
 def vault():
     win = pyautogui.pixelMatchesColor(484, 321, (42, 45, 51))
@@ -98,16 +116,23 @@ def main():
     win = pyautogui.pixelMatchesColor(484, 321, (42, 45, 51))
     vault()
     win = pyautogui.pixelMatchesColor(484, 321, (42, 45, 51))
-    heads()
+    tails()
     win = pyautogui.pixelMatchesColor(484, 321, (42, 45, 51))
     heads()
     win = pyautogui.pixelMatchesColor(484, 321, (42, 45, 51))
-    heads()
+    tails()
     win = pyautogui.pixelMatchesColor(484, 321, (42, 45, 51))
     heads()
     win = pyautogui.pixelMatchesColor(484, 321, (42, 45, 51))
-    heads()
+    tails()
     win = pyautogui.pixelMatchesColor(484, 321, (42, 45, 51))
     heads()
+    win = pyautogui.pixelMatchesColor(484, 321, (42, 45, 51))
+    tails()
+    win = pyautogui.pixelMatchesColor(484, 321, (42, 45, 51))
+    heads()
+    win = pyautogui.pixelMatchesColor(484, 321, (42, 45, 51))
+    tails()
+
 while True:
     main()
