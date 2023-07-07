@@ -3,7 +3,7 @@
 import pyautogui
 from time import sleep
 tail = 174, 250
-head = 79, 250
+head = 155, 261
 amount_location = 159, 225
 double = 235, 225
 bet_cashout = 195, 300
