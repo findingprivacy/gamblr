@@ -1,5 +1,6 @@
 #!/bin/python3
 #1024x768
+#zoom 50%
 import pyautogui
 from time import sleep
 tail = 174, 250
