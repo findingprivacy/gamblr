@@ -1,65 +1,48 @@
 import pyautogui
 from time import sleep
 bankroll = '1'
-address_bar = 175, 73
-vault_url = 'https://bc.game/'
-vault_tab = 321, 37
-vault_profile = 441, 112
-vault_wallet = 377, 147
-vault_pro = 97, 307
-vault_max = 327, 256
-vault_transfer = 289, 293
-vault_out = 310, 180
-vault_amount = 204, 254
+vault_tab = 306, 46
+vault_max = 380, 269
+vault_transfer = 346, 310
+vault_out = 372, 194
+vault_in = 275, 194
+vault_amount = 281, 272
 payout_amount = '1.5' # float(input('Payout Amount : '))
 bet_amount = '0.0001' # float(input('Bet Amount : '))
 loss_increase_percentage = '250' # int(input('Percentage Increase on Loss : '))
-address_bar = 175, 73
-classic_dice_url = 'https://bc.game/game/classic-dice'
-classic_dice_seed_location = 441, 514       
-classic_dice_new_seed = 250, 516
-classic_dice_tab = 50, 38
-classic_dice_payout_location = 289, 406
-classic_dice_auto_bet_location = 173, 180
-classic_dice_bet_amount_location = 100, 222
-classic_dice_enable_loss_increase_location = 89, 393
-classic_dice_loss_increase_location = 139, 395
-classic_dice_start_location = 165, 512
-limbo_url = 'https://bc.game/game/limbo'
-limbo_seed_location = 446, 514       
-limbo_new_seed = 250, 516
-limbo_tab = 141, 39
-limbo_payout_location = 264, 445
-limbo_auto_bet_location = 173, 180
-limbo_bet_amount_location = 100, 222
-limbo_enable_loss_increase_location = 89, 393
-limbo_loss_increase_location = 139, 395
-limbo_start_location = 165, 512
-ultimate_dice_url = 'https://bc.game/game/ultimate-dice'
+reload = 144, 86
+classic_dice_seed_location = 496, 528       
+classic_dice_new_seed = 303, 603
+classic_dice_tab = 100, 45
+classic_dice_payout_location = 337, 420
+classic_dice_auto_bet_location = 230, 196
+classic_dice_bet_amount_location = 156, 233
+classic_dice_enable_loss_increase_location = 138, 408
+classic_dice_loss_increase_location = 207, 408
+classic_dice_start_location = 193, 518
+limbo_seed_location = 502, 530       
+limbo_new_seed = 310, 606
+limbo_tab = 152, 48
+limbo_payout_location = 315, 459
+limbo_auto_bet_location = 230, 196
+limbo_dice_bet_amount_location = 156, 233
+limbo_dice_enable_loss_increase_location = 138, 408
+limbo_dice_loss_increase_location = 207, 408
+limbo_dice_start_location = 193, 518
 ultimate_dice_seed_location = 440, 529       
 ultimate_dice_new_seed = 250, 516
-ultimate_dice_tab = 234, 39
-ultimate_dice_payout_location = 281, 448
-ultimate_dice_auto_bet_location = 173, 180
-ultimate_dice_bet_amount_location = 100, 222
-ultimate_dice_enable_loss_increase_location = 86, 351
-ultimate_dice_loss_increase_location = 150, 351
-ultimate_dice_start_location = 165, 512
+ultimate_dice_tab = 236, 42
+ultimate_dice_payout_location = 335, 463
+ultimate_dice_auto_bet_location = 235, 193
+ultimate_dice_bet_amount_location = 160, 236
+ultimate_dice_enable_loss_increase_location = 139, 366
+ultimate_dice_loss_increase_location = 199, 366
+ultimate_dice_start_location = 195, 524
 def vault():
     pyautogui.click(vault_tab)
-    sleep(0.25)
-    pyautogui.click(address_bar)
-    sleep(0.25)
-    pyautogui.write(vault_url)
-    sleep(0.25)
-    pyautogui.press('enter')
-    sleep(10)
-    pyautogui.moveTo(vault_profile)
-    sleep(0.25)
-    pyautogui.click(vault_wallet)
-    sleep(5)
-    pyautogui.click(vault_pro)
-    sleep(5)
+    sleep(0.1)
+    pyautogui.click(vault_in)
+    sleep(0.1)
     pyautogui.click(vault_max)
     sleep(0.1)
     pyautogui.click(vault_transfer)
@@ -74,11 +57,7 @@ def vault():
 def classicDice():
     pyautogui.click(classic_dice_tab)
     sleep(0.25)
-    pyautogui.click(address_bar)
-    sleep(0.25)
-    pyautogui.write(classic_dice_url)
-    sleep(0.25)
-    pyautogui.press('enter')
+    pyautogui.click(reload)
     sleep(10)
     pyautogui.click(classic_dice_seed_location) # change seed
     sleep(2.5)
@@ -105,11 +84,7 @@ def classicDice():
 def limbo():
     pyautogui.click(limbo_tab)
     sleep(0.25)
-    pyautogui.click(address_bar)
-    sleep(0.25)
-    pyautogui.write(limbo_url)
-    sleep(0.25)
-    pyautogui.press('enter')
+    pyautogui.click(reload)
     sleep(10)
     pyautogui.click(limbo_seed_location) # change seed
     sleep(2.5)
@@ -136,11 +111,7 @@ def limbo():
 def ultimateDice():
     pyautogui.click(ultimate_dice_tab)
     sleep(0.25)
-    pyautogui.click(address_bar)
-    sleep(0.25)
-    pyautogui.write(ultimate_dice_url)
-    sleep(0.25)
-    pyautogui.press('enter')
+    pyautogui.click(reload)
     sleep(10)
     pyautogui.click(ultimate_dice_seed_location) # change seed
     sleep(2.5)
@@ -181,7 +152,7 @@ def main():
     classicDice()
     limbo()
     ultimateDice()
-    sleep(60)
+    sleep(120)
     stop()
     vault()
 while True:
