@@ -57,8 +57,8 @@ def vault():
 def classicDice():
     pyautogui.click(classic_dice_tab)
     sleep(0.25)
-    pyautogui.click(reload)
-    sleep(10)
+    #pyautogui.click(reload)
+    #sleep(10)
     pyautogui.click(classic_dice_seed_location) # change seed
     sleep(2.5)
     pyautogui.click(classic_dice_new_seed)
@@ -84,8 +84,8 @@ def classicDice():
 def limbo():
     pyautogui.click(limbo_tab)
     sleep(0.25)
-    pyautogui.click(reload)
-    sleep(10)
+    #pyautogui.click(reload)
+    #sleep(10)
     pyautogui.click(limbo_seed_location) # change seed
     sleep(2.5)
     pyautogui.click(limbo_new_seed)
@@ -111,8 +111,8 @@ def limbo():
 def ultimateDice():
     pyautogui.click(ultimate_dice_tab)
     sleep(0.25)
-    pyautogui.click(reload)
-    sleep(10)
+    #pyautogui.click(reload)
+    #sleep(10)
     pyautogui.click(ultimate_dice_seed_location) # change seed
     sleep(2.5)
     pyautogui.click(ultimate_dice_new_seed)
