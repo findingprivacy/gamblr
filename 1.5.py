@@ -8,7 +8,7 @@ vault_out = 372, 194
 vault_in = 275, 194
 vault_amount = 281, 272
 payout_amount = '1.5' # float(input('Payout Amount : '))
-bet_amount = '0.0001' # float(input('Bet Amount : '))
+bet_amount = '0.00001' # float(input('Bet Amount : '))
 loss_increase_percentage = '250' # int(input('Percentage Increase on Loss : '))
 reload = 144, 86
 classic_dice_seed_location = 496, 528       
@@ -152,7 +152,7 @@ def main():
     classicDice()
     limbo()
     ultimateDice()
-    sleep(10)
+    sleep(300)
     stop()
     vault()
 while True:
