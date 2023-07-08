@@ -7,7 +7,7 @@ limbo_start_location = 193, 518
 ultimate_dice_tab = 236, 42
 ultimate_dice_start_location = 195, 524
 number_of_bets = 130, 279
-bets = '10'
+bets = '5'
 def classicDice():
     pyautogui.click(classic_dice_tab)
     sleep(0.25)
