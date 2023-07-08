@@ -152,7 +152,7 @@ def main():
     classicDice()
     limbo()
     ultimateDice()
-    sleep(60)
+    sleep(15)
     stop()
     vault()
 while True:
