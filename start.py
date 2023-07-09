@@ -45,10 +45,6 @@ ultimate_dice_start_location = 134, 509
 def classicDice():
     pyautogui.click(classic_dice_tab)
     sleep(0.25)
-    pyautogui.click(classic_dice_seed_location) # change seed
-    sleep(2.5)
-    pyautogui.click(classic_dice_new_seed)
-    sleep(2)
     pyautogui.click(classic_dice_auto_bet_location)
     sleep(0.25)
     pyautogui.doubleClick(classic_dice_bet_amount_location, interval=0.15)
@@ -69,10 +65,6 @@ def classicDice():
 def limbo():
     pyautogui.click(limbo_tab)
     sleep(0.25)
-    pyautogui.click(limbo_seed_location) # change seed
-    sleep(2.5)
-    pyautogui.click(limbo_new_seed)
-    sleep(2)
     pyautogui.click(limbo_auto_bet_location)
     sleep(0.25)
     pyautogui.doubleClick(limbo_bet_amount_location, interval=0.15)
@@ -93,10 +85,6 @@ def limbo():
 def ultimateDice():
     pyautogui.click(ultimate_dice_tab)
     sleep(0.25)
-    pyautogui.click(ultimate_dice_seed_location) # change seed
-    sleep(2.5)
-    pyautogui.click(ultimate_dice_new_seed)
-    sleep(2)
     pyautogui.click(ultimate_dice_auto_bet_location)
     sleep(0.25)
     pyautogui.doubleClick(ultimate_dice_bet_amount_location, interval=0.15)
@@ -126,3 +114,4 @@ def main():
     play()
     pyautogui.click(a4)
     play()
+main()
