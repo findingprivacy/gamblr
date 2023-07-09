@@ -113,8 +113,6 @@ def ultimateDice():
     sleep(0.25)
     pyautogui.write(payout_amount)
     sleep(0.25)
-
-
 def play():
     classicDice()
     limbo()
@@ -128,4 +126,3 @@ def main():
     play()
     pyautogui.click(a4)
     play()
-    main()
