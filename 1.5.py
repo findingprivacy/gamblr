@@ -115,7 +115,7 @@ def stop():
     sleep(0.5)
     pyautogui.click(ultimate_dice_tab)
     sleep(2)
-    pyautogui.click(ultimate_dice_bet_amount_location)
+    pyautogui.click(ultimate_dice_start_location)
     sleep(0.5)
 def play():
     classicDice()
