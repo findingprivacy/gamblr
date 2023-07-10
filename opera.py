@@ -88,7 +88,7 @@ def ultimateDice():
     sleep(0.1)
 def stop():
     pyautogui.click(classic_dice_tab)
-    sleep(2)
+    sleep(5)
     pyautogui.click(classic_dice_start_location) 
     sleep(0.5)
     pyautogui.click(limbo_tab)
