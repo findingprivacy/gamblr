@@ -110,11 +110,11 @@ def stop():
     pyautogui.click(classic_dice_start_location) 
     sleep(0.5)
     pyautogui.click(limbo_tab)
-    sleep(2)
+    sleep(10)
     pyautogui.click(limbo_start_location) 
     sleep(0.5)
     pyautogui.click(ultimate_dice_tab)
-    sleep(2)
+    sleep(10)
     pyautogui.click(ultimate_dice_start_location)
     sleep(0.5)
 def play():
