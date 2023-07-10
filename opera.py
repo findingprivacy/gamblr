@@ -62,7 +62,7 @@ def classicDice():
     pyautogui.click(classic_dice_start_location) # on auto
     sleep(1)
     win = pyautogui.pixelMatchesColor(517, 193, (59, 193, 23))
-    wait(lambda: win, sleep_seconds=0.01)
+    wait(lambda: win)
     pyautogui.click(classic_dice_start_location) # on auto
 def main():
     classicDice()
