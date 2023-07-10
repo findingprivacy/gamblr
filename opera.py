@@ -1,6 +1,5 @@
 import pyautogui
 from time import sleep
-from waiting import wait
 ##### bet info
 bankroll = '1'
 payout_amount = '5' # float(input('Payout Amount : '))
