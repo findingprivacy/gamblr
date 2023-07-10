@@ -30,6 +30,7 @@ vault_transfer = 345, 308
 vault_out = 375, 192
 vault_in = 275, 192
 vault_amount = 256, 267
+win = pyautogui.pixelMatchesColor(517, 193, (59, 193, 23))
 
 #####
 def vault():
@@ -91,19 +92,16 @@ def ultimateDice():
 def stop():
     pyautogui.click(classic_dice_tab)
     sleep(2)
-    win = pyautogui.pixelMatchesColor(517, 193, (59, 193, 23))
     wait(lambda: win)
     pyautogui.click(classic_dice_start_location) 
     sleep(0.5)
     pyautogui.click(limbo_tab)
     sleep(2)
-    win = pyautogui.pixelMatchesColor(517, 193, (59, 193, 23))
     wait(lambda: win)
     pyautogui.click(limbo_start_location) 
     sleep(0.5)
     pyautogui.click(ultimate_dice_tab)
     sleep(2)
-    win = pyautogui.pixelMatchesColor(517, 193, (59, 193, 23))
     wait(lambda: win)
     pyautogui.click(ultimate_dice_start_location)
     sleep(0.5)
