@@ -30,7 +30,13 @@ vault_transfer = 345, 308
 vault_out = 375, 192
 vault_in = 275, 192
 vault_amount = 256, 267
-win = pyautogui.pixelMatchesColor(517, 193, (59, 193, 23))
+def win():
+    win = pyautogui.pixelMatchesColor(517, 193, (59, 193, 23))
+    if win:
+        return True
+    else:
+        return False
+win = win()
 
 #####
 def vault():
