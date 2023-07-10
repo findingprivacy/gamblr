@@ -1,5 +1,6 @@
 import pyautogui
 from time import sleep
+from waiting import wait
 ##### bet info
 bankroll = '1'
 payout_amount = '5' # float(input('Payout Amount : '))
@@ -90,14 +91,20 @@ def ultimateDice():
 def stop():
     pyautogui.click(classic_dice_tab)
     sleep(2)
+    win = pyautogui.pixelMatchesColor(517, 193, (59, 193, 23))
+    wait(win, timeout_seconds=10)
     pyautogui.click(classic_dice_start_location) 
     sleep(0.5)
     pyautogui.click(limbo_tab)
-    sleep(10)
+    sleep(2)
+    win = pyautogui.pixelMatchesColor(517, 193, (59, 193, 23))
+    wait(win, timeout_seconds=10)
     pyautogui.click(limbo_start_location) 
     sleep(0.5)
     pyautogui.click(ultimate_dice_tab)
-    sleep(10)
+    sleep(2)
+    win = pyautogui.pixelMatchesColor(517, 193, (59, 193, 23))
+    wait(win, timeout_seconds=10)
     pyautogui.click(ultimate_dice_start_location)
     sleep(0.5)
 def play():
