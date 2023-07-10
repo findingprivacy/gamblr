@@ -1,9 +1,10 @@
 import pyautogui
 from time import sleep
+from waiting import wait
 ##### bet info
 bankroll = '1'
 payout_amount = '5' # float(input('Payout Amount : '))
-bet_amount = '0.001' # float(input('Bet Amount : '))
+bet_amount = '0.00001' # float(input('Bet Amount : '))
 loss_increase_percentage = '25.5' # int(input('Percentage Increase on Loss : '))
 
 ##### game location info zoom 50% chrome
@@ -60,52 +61,11 @@ def classicDice():
     sleep(0.25)
     pyautogui.click(classic_dice_start_location) # on auto
     sleep(0.1)
-def limbo():
-    pyautogui.click(limbo_tab)
-    sleep(0.25)
-    pyautogui.click(limbo_seed_location) # change seed
-    sleep(2.5)
-    pyautogui.click(limbo_new_seed)
-    sleep(2)
-    pyautogui.doubleClick(limbo_bet_amount_location, interval=0.15)
-    sleep(0.25)
-    pyautogui.write(bet_amount) 
-    sleep(0.25)
-    pyautogui.click(limbo_start_location) # on auto
-    sleep(0.1)
-def ultimateDice():
-    pyautogui.click(ultimate_dice_tab)
-    sleep(0.25)
-    pyautogui.click(ultimate_dice_seed_location) # change seed
-    sleep(2.5)
-    pyautogui.click(ultimate_dice_new_seed)
-    sleep(2)
-    pyautogui.doubleClick(ultimate_dice_bet_amount_location, interval=0.15)
-    sleep(0.25)
-    pyautogui.write(bet_amount) 
-    sleep(0.25)
-    pyautogui.click(ultimate_dice_start_location) 
-    sleep(0.1)
-def stop():
-    pyautogui.click(classic_dice_tab)
-    sleep(5)
-    pyautogui.click(classic_dice_start_location) 
-    sleep(0.5)
-    pyautogui.click(limbo_tab)
-    sleep(10)
-    pyautogui.click(limbo_start_location) 
-    sleep(0.5)
-    pyautogui.click(ultimate_dice_tab)
-    sleep(10)
-    pyautogui.click(ultimate_dice_start_location)
-    sleep(0.5)
-def play():
-    classicDice()
-    limbo()
-    ultimateDice()
+    win = pyautogui.pixelMatchesColor(517, 193, (59, 193, 23))
+    wait(lambda: win, sleep_seconds=0.01)
+    pyautogui.click(classic_dice_start_location) # on auto
 def main():
-    play()
-    stop()
+    classicDice()
     vault()
 while True:
     main()
