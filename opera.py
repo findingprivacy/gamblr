@@ -31,6 +31,7 @@ vault_out = 375, 192
 vault_in = 275, 192
 vault_amount = 256, 267
 #####
+
 def vault():
     pyautogui.click(vault_tab)
     sleep(1)
