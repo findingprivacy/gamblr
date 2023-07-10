@@ -3,7 +3,7 @@ from time import sleep
 ##### bet info
 bankroll = '1'
 payout_amount = '5' # float(input('Payout Amount : '))
-bet_amount = '0.00001' # float(input('Bet Amount : '))
+bet_amount = '0.001' # float(input('Bet Amount : '))
 loss_increase_percentage = '25.5' # int(input('Percentage Increase on Loss : '))
 
 ##### game location info zoom 50% chrome
