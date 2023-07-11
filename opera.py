@@ -91,7 +91,7 @@ def main():
     classicDice()
     limbo()
     ultimateDice()
-    sleep(1)
+    sleep(5)
     vault()
 while True:
     main()
