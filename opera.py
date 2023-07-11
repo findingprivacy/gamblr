@@ -4,7 +4,7 @@ from waiting import wait
 ##### bet info
 bankroll = '1'
 payout_amount = '5' # float(input('Payout Amount : '))
-bet_amount = '0.00001' # float(input('Bet Amount : '))
+bet_amount = '0.01' # float(input('Bet Amount : '))
 loss_increase_percentage = '25.5' # int(input('Percentage Increase on Loss : '))
 
 ##### game location info zoom 50% chrome
@@ -52,7 +52,7 @@ def vault():
 def classicDice():
     pyautogui.click(classic_dice_tab)
     sleep(0.25)
-    pyautogui.click(classic_dice_seed_location) # change seed
+    pyautogui.click(classic_dice_seed_location) 
     sleep(2.5)
     pyautogui.click(classic_dice_new_seed)
     sleep(2)
@@ -60,13 +60,38 @@ def classicDice():
     sleep(0.25)
     pyautogui.write(bet_amount) 
     sleep(0.25)
-    pyautogui.click(classic_dice_start_location) # on auto
+    pyautogui.click(classic_dice_start_location)
     sleep(1)
-    win = pyautogui.pixelMatchesColor(517, 193, (59, 193, 23))
-    wait(lambda: win)
-    pyautogui.click(classic_dice_start_location) # on auto
+def limbo():
+    pyautogui.click(limbo_tab)
+    sleep(0.25)
+    pyautogui.click(limbo_seed_location) 
+    sleep(2.5)
+    pyautogui.click(limbo_new_seed)
+    sleep(2)
+    pyautogui.doubleClick(limbo_bet_amount_location, interval=0.15)
+    sleep(0.25)
+    pyautogui.write(bet_amount) 
+    sleep(0.25)
+    pyautogui.click(limbo_start_location)
+    sleep(1)
+def ultimateDice():
+    pyautogui.click(ultimate_dice_tab)
+    sleep(0.25)
+    pyautogui.click(ultimate_dice_seed_location) 
+    sleep(2.5)
+    pyautogui.click(ultimate_dice_new_seed)
+    sleep(2)
+    pyautogui.doubleClick(ultimate_dice_bet_amount_location, interval=0.15)
+    sleep(0.25)
+    pyautogui.write(bet_amount) 
+    sleep(0.25)
+    pyautogui.click(ultimate_dice_start_location)
+    sleep(1)
 def main():
     classicDice()
+    limbo()
+    ultimateDice()
     vault()
 while True:
     main()
