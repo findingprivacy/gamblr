@@ -74,14 +74,12 @@ def vault():
     if win:
         pyautogui.click(bet_cashout)
         sleep(1)
-        pyautogui.doubleClick(amount_location, interval=0.25)
-        sleep(0.25)
-        pyautogui.write(bet_amount)
     else:
-        pyautogui.click(double)
-        sleep(0.1)
-        pyautogui.click(double)
-        sleep(0.1)
+        pass
+    pyautogui.doubleClick(amount_location, interval=0.25)
+    sleep(0.25)
+    pyautogui.write(bet_amount)
+    sleep(0.1)
     pyautogui.click(bet_cashout)
     sleep(1)
     pyautogui.click(head)
