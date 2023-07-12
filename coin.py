@@ -9,6 +9,8 @@ amount_location = 157, 224
 double = 232, 225
 bet_cashout = 192, 303
 coin_tab = 100, 40
+coin_seed = 501, 528
+coin_new_seed = 304, 604
 vault_tab = 300, 40
 vault_max = 385, 268
 vault_transfer = 345, 308
@@ -84,10 +86,22 @@ def vault():
     sleep(1)
     pyautogui.click(head)
     sleep(1)
-def main():
+def game():
     vault()
     tails()
     heads()
     tails()
+def newSeed():
+    pyautogui.click(coin_seed)
+    sleep(1)
+    pyautogui.click(coin_new_seed)
+    sleep(1)
+def main():
+    newSeed()
+    game()
+    game()
+    game()
+    game()
+    game()
 while True:
     main()
