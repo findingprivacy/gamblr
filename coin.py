@@ -1,8 +1,8 @@
 #!/bin/python3
 import pyautogui
 from time import sleep
-bet_amount = '0.00001'
-bankroll = '.31'
+bet_amount = '0.0001'
+bankroll = '.55'
 tail = 233, 262
 head = 155, 262
 amount_location = 157, 224
