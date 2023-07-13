@@ -2,11 +2,12 @@
 import pyautogui
 from time import sleep
 bet_amount = '0.0001'
-bankroll = '.55'
+bankroll = '.3069'
 tail = 233, 262
 head = 155, 262
 amount_location = 157, 224
 double = 232, 225
+half = 211, 227
 bet_cashout = 192, 303
 coin_tab = 100, 40
 coin_seed = 501, 531
@@ -54,6 +55,8 @@ def heads():
         sleep(0.1)
         pyautogui.click(double)
         sleep(0.1)
+        pyautogui.click(double)
+        sleep(0.1)
     pyautogui.click(bet_cashout)
     sleep(1)
     pyautogui.click(head)
@@ -91,10 +94,9 @@ def tails():
         pyautogui.write(bet_amount)
         sleep(0.1)
     else:
-        pyautogui.click(double)
+        pyautogui.click(half)
         sleep(0.1)
-        pyautogui.click(double)
-        sleep(0.1)
+
     pyautogui.click(bet_cashout)
     sleep(1)
     pyautogui.click(head)
