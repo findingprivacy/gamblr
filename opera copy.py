@@ -3,7 +3,7 @@ from time import sleep
 ##### bet info
 
 numbet = '99'
-bet_amount = '0.0017'
+bet_amount = '0.001'
 double = 232, 237
 numbetloc = 174, 281
 classic_dice_seed_location = 500, 517       
@@ -12,7 +12,7 @@ classic_dice_tab = 100, 40
 classic_dice_bet_amount_location = 153, 236
 classic_dice_start_location = 191, 526
 def classicDice():
-    win = pyautogui.pixelMatchesColor((495, 195, (59, 193, 23))
+    win = pyautogui.pixelMatchesColor(495, 195, (59, 193, 23))
     sleep(0.25)
     if win:
         pyautogui.click(classic_dice_seed_location) 
