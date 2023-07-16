@@ -3,7 +3,7 @@ from time import sleep
 ##### bet info
 
 numbet = '99'
-bet_amount = '0.0001'
+bet_amount = '0.0017'
 double = 232, 237
 numbetloc = 174, 281
 classic_dice_seed_location = 500, 517       
