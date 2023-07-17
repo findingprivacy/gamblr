@@ -2,7 +2,7 @@
 import pyautogui
 from time import sleep
 numbet = '49'
-bet_amount = '0.0017'
+bet_amount = '0.0001'
 bet_amount_location = 153, 236
 start_location = 191, 526
 double = 232, 237
