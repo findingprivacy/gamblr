@@ -40,6 +40,6 @@ def classicDice():
         sleep(0.1)
 def main():
     classicDice()
-    sleep(45)
+    sleep(75)
 while True:
     main()
