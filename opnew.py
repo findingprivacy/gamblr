@@ -1,8 +1,8 @@
 #opera zoom 50, payout 99, increase 1.25, on win -100, 50 games check res or double
 import pyautogui
 from time import sleep
-numbet = '49'
-bet_amount = '0.0001'
+numbet = '99'
+bet_amount = '0.001'
 bet_amount_location = 153, 236
 start_location = 191, 526
 double = 232, 237
@@ -140,22 +140,10 @@ def main():
     classicDiceStart()
     limboStart()
     ultimateDiceStart()
-    sleep(25)
+    sleep(55)
     classicDice()
     limbo()
     ultimateDice()
-    sleep(25)
-    classicDice()
-    limbo()
-    ultimateDice()
-    sleep(25)
-    classicDice()
-    limbo()
-    ultimateDice()
-    sleep(25)
-    classicDice()
-    limbo()
-    ultimateDice()
-    sleep(25)
+    sleep(55)
 while True:
     main()
