@@ -1,149 +1,55 @@
 #opera zoom 50, payout 99, increase 1.25, on win -100, 50 games check res or double
 import pyautogui
 from time import sleep
-numbet = '99'
-bet_amount = '0.001'
+bankroll = '0.01'
+vault_tab = 300, 40
+vault_max = 385, 268
+vault_transfer = 345, 308
+vault_out = 375, 192
+vault_in = 275, 192
+vault_amount = 256, 267
+bet_amount = '0.002'
 bet_amount_location = 153, 236
 start_location = 191, 526
-double = 232, 237
-numbetloc = 174, 281
 classic_dice_seed_location = 500, 517       
 classic_dice_new_seed = 302, 602
 classic_dice_tab = 89, 44
-def classicDiceStart():
-    pyautogui.click(classic_dice_tab)
-    sleep(0.1)
-    win = pyautogui.pixelMatchesColor(495, 195, (59, 193, 23))
-    sleep(0.25)
-    if win:
-        pyautogui.click(classic_dice_seed_location) 
-        sleep(2.5)
-        pyautogui.click(classic_dice_new_seed)
-        sleep(2)
-    else:
-        sleep(0.1)
-    pyautogui.doubleClick(bet_amount_location, interval=0.15)
-    sleep(0.1)
-    pyautogui.write(bet_amount)
-    sleep(0.1)
-    pyautogui.doubleClick(numbetloc, interval=0.15)
-    sleep(0.1)
-    pyautogui.write(numbet) 
-    sleep(0.1)
-    pyautogui.click(start_location)
-    sleep(0.5)
-limbo_seed_location = 503, 529       
-limbo_new_seed = 302, 602
-limbo_tab = 175, 44
-def limboStart():
-    pyautogui.click(limbo_tab)
-    sleep(0.1)
-    win = pyautogui.pixelMatchesColor(495, 195, (59, 193, 23))
-    sleep(0.25)
-    if win:
-        pyautogui.click(limbo_seed_location) 
-        sleep(2.5)
-        pyautogui.click(limbo_new_seed)
-        sleep(2)
-    else:
-        sleep(0.1)
-    pyautogui.doubleClick(bet_amount_location, interval=0.15)
-    sleep(0.1)
-    pyautogui.write(bet_amount)
-    sleep(0.1)
-    pyautogui.doubleClick(numbetloc, interval=0.15)
-    sleep(0.1)
-    pyautogui.write(numbet) 
-    sleep(0.1)
-    pyautogui.click(start_location)
-    sleep(0.5)
-ultimate_dice_seed_location = 497, 539       
-ultimate_dice_new_seed = 302, 602
-ultimate_dice_tab = 240, 44
-def ultimateDiceStart():
-    pyautogui.click(ultimate_dice_tab)
-    sleep(0.1)
-    win = pyautogui.pixelMatchesColor(495, 195, (59, 193, 23))
-    sleep(0.25)
-    if win:
-        pyautogui.click(ultimate_dice_seed_location) 
-        sleep(2.5)
-        pyautogui.click(ultimate_dice_new_seed)
-        sleep(2)
-    else:
-        sleep(0.1)
-    pyautogui.doubleClick(bet_amount_location, interval=0.15)
-    sleep(0.1)
-    pyautogui.write(bet_amount)
-    sleep(0.1)
-    pyautogui.doubleClick(numbetloc, interval=0.15)
-    sleep(0.1)
-    pyautogui.write(numbet) 
-    sleep(0.1)
-    pyautogui.click(start_location)
-    sleep(0.5)
+def vault():
+    pyautogui.click(vault_tab)
+    sleep(1)
+    pyautogui.click(vault_in)
+    sleep(1)
+    pyautogui.click(vault_max)
+    sleep(1)
+    pyautogui.click(vault_transfer)
+    sleep(1)
+    pyautogui.click(vault_out)
+    sleep(1)
+    pyautogui.doubleClick(vault_amount, interval=0.25)
+    sleep(1)
+    pyautogui.write(bankroll)
+    sleep(1)
+    pyautogui.click(vault_transfer)
+    sleep(1)
 def classicDice():
     pyautogui.click(classic_dice_tab)
     sleep(0.1)
-    win = pyautogui.pixelMatchesColor(495, 195, (59, 193, 23))
-    sleep(0.25)
-    if win:
-        classicDiceStart()
-    else:
-        pyautogui.click(double) 
-        sleep(0.1)
-        pyautogui.doubleClick(numbetloc, interval=0.15)
-        sleep(0.1)
-        pyautogui.write(numbet) 
-        sleep(0.1)
-        pyautogui.click(start_location)
-        sleep(0.5)
-limbo_seed_location = 503, 529       
-limbo_new_seed = 302, 602
-limbo_tab = 175, 44
-def limbo():
-    pyautogui.click(limbo_tab)
+    pyautogui.click(classic_dice_seed_location) 
+    sleep(2.5)
+    pyautogui.click(classic_dice_new_seed)
+    sleep(2)
+    pyautogui.doubleClick(bet_amount_location, interval=0.15)
     sleep(0.1)
-    win = pyautogui.pixelMatchesColor(495, 195, (59, 193, 23))
-    sleep(0.25)
-    if win:
-        limboStart()
-    else:
-        pyautogui.click(double) 
-        sleep(0.1)
-        pyautogui.doubleClick(numbetloc, interval=0.15)
-        sleep(0.1)
-        pyautogui.write(numbet) 
-        sleep(0.1)
-        pyautogui.click(start_location)
-        sleep(0.5)
-ultimate_dice_seed_location = 497, 539       
-ultimate_dice_new_seed = 302, 602
-ultimate_dice_tab = 240, 44
-def ultimateDice():
-    pyautogui.click(ultimate_dice_tab)
+    pyautogui.write(bet_amount)
     sleep(0.1)
-    win = pyautogui.pixelMatchesColor(495, 195, (59, 193, 23))
-    sleep(0.25)
-    if win:
-        ultimateDiceStart()
-    else:
-        pyautogui.click(double) 
-        sleep(0.1)
-        pyautogui.doubleClick(numbetloc, interval=0.15)
-        sleep(0.1)
-        pyautogui.write(numbet) 
-        sleep(0.1)
-        pyautogui.click(start_location)
-        sleep(0.5)
+    pyautogui.click(start_location)
+    sleep(0.5)
+
 def main():
-    classicDiceStart()
-    limboStart()
-    ultimateDiceStart()
-    sleep(55)
+    vault()
     classicDice()
-    limbo()
-    ultimateDice()
-    sleep(55)
+    sleep(1)
+
+
 while True:
     main()
