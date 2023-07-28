@@ -1,14 +1,14 @@
 #opera zoom 50, payout 99, increase 1.25, on win -100, 50 games check res or double
 import pyautogui
 from time import sleep
-bankroll = '0.1'
+bankroll = '1'
 vault_tab = 300, 40
 vault_max = 385, 268
 vault_transfer = 345, 308
 vault_out = 375, 192
 vault_in = 275, 192
 vault_amount = 256, 267
-bet_amount = '0.0001'
+bet_amount = '0.001'
 bet_amount_location = 153, 236
 start_location = 191, 526
 classic_dice_seed_location = 500, 517       
