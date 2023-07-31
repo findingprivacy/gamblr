@@ -8,7 +8,7 @@ vault_transfer = 345, 308
 vault_out = 375, 192
 vault_in = 275, 192
 vault_amount = 256, 267
-bet_amount = '0.001'
+bet_amount = '0.1'
 bet_amount_location = 153, 236
 start_location = 191, 526
 classic_dice_seed_location = 500, 517       
@@ -20,24 +20,6 @@ def wait():
 def vault():
     win = pyautogui.pixelMatchesColor(515, 200, (59, 193, 23))
     if win:
-        pyautogui.click(vault_tab)
-        sleep(1)
-        pyautogui.click(vault_in)
-        sleep(1)
-        pyautogui.click(vault_max)
-        sleep(1)
-        pyautogui.click(vault_transfer)
-        sleep(1)
-        pyautogui.click(vault_out)
-        sleep(1)
-        pyautogui.doubleClick(vault_amount, interval=0.25)
-        sleep(1)
-        pyautogui.write(bankroll)
-        sleep(1)
-        pyautogui.click(vault_transfer)
-        sleep(1)
-        pyautogui.click(classic_dice_tab)
-        sleep(0.1)
         pyautogui.click(classic_dice_seed_location) 
         sleep(2.5)
         pyautogui.click(classic_dice_new_seed)
