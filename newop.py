@@ -1,24 +1,16 @@
 #opera zoom 50, payout 99, increase 1.25, on win -100, 50 games check res or double
 import pyautogui
 from time import sleep
-bankroll = '1'
-vault_tab = 300, 40
-vault_max = 385, 268
-vault_transfer = 345, 308
-vault_out = 375, 192
-vault_in = 275, 192
-vault_amount = 256, 267
 bet_amount = '0.1'
-bet_amount_location = 153, 236
-start_location = 191, 526
-classic_dice_seed_location = 500, 517       
-classic_dice_new_seed = 302, 602
-classic_dice_tab = 89, 44
+bet_amount_location = 120, 192
+start_location = 145, 383
+classic_dice_seed_location = 455, 388       
+classic_dice_new_seed = 279, 462
 def wait():
     sleep(1)
     vault()
 def vault():
-    win = pyautogui.pixelMatchesColor(515, 200, (59, 193, 23))
+    win = pyautogui.pixelMatchesColor(468, 165, (59, 193, 23))
     if win:
         pyautogui.click(classic_dice_seed_location) 
         sleep(2.5)
