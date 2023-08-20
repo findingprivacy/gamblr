@@ -7,7 +7,6 @@ from os import system
 bet_amount = '100' # float(input('Bet Amount : '))
 classic_dice_seed_location = 439, 531       
 classic_dice_new_seed = 245, 518
-classic_dice_tab = 50, 38
 classic_dice_payout_location = 263, 456
 classic_dice_auto_bet_location = 182, 186
 classic_dice_bet_amount_location = 95, 229
@@ -23,11 +22,11 @@ def classicDice():
         sleep(2.5)
         pyautogui.click(classic_dice_new_seed)
         sleep(2)
-        pyautogui.doubleClick(bet_amount_location, interval=0.15)
+        pyautogui.doubleClick(classic_dice_auto_bet_location, interval=0.15)
         sleep(0.1)
         pyautogui.write(bet_amount)
         sleep(0.1)
-        pyautogui.click(start_location)
+        pyautogui.click(classic_dice_start_location)
         sleep(0.5)
     else:
         sleep(0.1)
@@ -35,5 +34,5 @@ def main():
     classicDice()
     sleep(1)
 
-while True():
+while True:
     main()
